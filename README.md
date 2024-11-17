@@ -12,27 +12,27 @@ Using Generative Adversarial Networks (GANs) to highlight disease regions in a n
 - Disease Highlighting.
 
 ## REQUIREMENTS
-   -Python libraries:
-      -numpy
-      -opencv-python (cv2)
-      -tensorflow (Keras)
-      -matplotlib
-   -google.colab
+   - Python libraries:
+      - numpy
+      - opencv-python (cv2)
+      - tensorflow (Keras)
+      - matplotlib
+   - google.colab
    
 ## CODE EXPLAINATION
 ### Image Preprocessing (preprocess_image):
- -Loads images, resizes, equalizes the histogram, and normalizes pixel values.
+ - Loads images, resizes, equalizes the histogram, and normalizes pixel values.
 
 ### Otsu’s Thresholding (otsu_segmentation):
- -Applies Otsu’s method to segment the disease from the background.
+ - Applies Otsu’s method to segment the disease from the background.
 
 ### GAN Model Architecture:
- -Discriminator: A simple neural network that distinguishes between real and fake images.
- -Generator: A neural network that generates images resembling the normal image from random noise.
+ - Discriminator: A simple neural network that distinguishes between real and fake images.
+ - Generator: A neural network that generates images resembling the normal image from random noise.
  
 ### Training Loop (train_gan):
- -The GAN is trained for a specified number of epochs. Each epoch trains the discriminator on both real and generated images, and then trains the generator to fool the discriminator.
+ - The GAN is trained for a specified number of epochs. Each epoch trains the discriminator on both real and generated images, and then trains the generator to fool the discriminator.
 
 ### Disease Visualization (highlight_disease):
- -The disease mask is applied to the normal image, and both are blended for better visualization.
+ - The disease mask is applied to the normal image, and both are blended for better visualization.
 
